@@ -23,32 +23,53 @@ class _HomePageState extends State<HomePage> {
               decoration: BoxDecoration(
                 color: Colors.transparent,
               ),
-            ),
-            Container(
-              margin: EdgeInsets.only(top:MediaQuery.of(context).size.height*3/5-60),
-              padding: EdgeInsets.only(left: 10,right: 10),
-              height:MediaQuery.of(context).size.height*2/5 ,
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                color: Color(0xFF121003),
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(30),
-                  topRight: Radius.circular(3 0),
+              child: Stack(children: [
+                Container(
+                  margin: EdgeInsets.only(
+                      top: 55,
+                      left: MediaQuery.of(context).size.width / 2 - 100),
+                  width: 200,
+                  height: 200,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(100),
+                    color: Colors.orange.withOpacity(0.7),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 50, right: 22),
+                  // height: MediaQuery.of(context).size.height,
+                  //child: Image.asset("assets/p1.jpg"),
+                  child: Image.asset(
+                    "assets/P2.png",
+                    height: 400,
+                    width: 400,
+                    fit: BoxFit.cover,
+                  ),
                 )
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
-                children: [
+              ]),
+            ),
+            Positioned(
+              bottom: 0,
+              child: Container(
+                padding: EdgeInsets.only(left: 10, right: 10),
+                height: MediaQuery.of(context).size.height * 2 / 5,
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                    color: Color(0xFF121003),
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(30),
+                      topRight: Radius.circular(30),
+                    )),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
                     Flexible(
                       child: Text(
                         "Let\'s Enjoy with Best Product",
                         maxLines: 2,
                         textAlign: TextAlign.center,
                         style: GoogleFonts.montserrat(
-                          fontSize: 28,
-                          color: Colors.white
-                        ),
+                            fontSize: 28, color: Colors.white),
                       ),
                     ),
                     Flexible(
@@ -57,29 +78,34 @@ class _HomePageState extends State<HomePage> {
                         maxLines: 3,
                         textAlign: TextAlign.center,
                         style: GoogleFonts.montserrat(
-                          fontSize: 20,
-                          color: Colors.white
-                        ),
+                            fontSize: 20, color: Colors.white),
                       ),
                     ),
-                  Container(
-                    height: 50,
-                    width: MediaQuery.of(context).size.width*2/3,
-                    decoration: BoxDecoration(
-                      color: Colors.orange.withOpacity(0.9),
-                      borderRadius: BorderRadius.circular(20)
-                    ),
-                    child: Center(
-                      child: Text(
-                        "Let\'s Go",
-                        style: GoogleFonts.montserrat(
-                          fontSize: 19,
-                          color: Colors.white
+                    Material(
+                      elevation: 7,
+                      color: Color(0xFF121003),
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/dash');
+                        },
+                        child: Container(
+                          height: 50,
+                          width: MediaQuery.of(context).size.width * 2 / 3,
+                          decoration: BoxDecoration(
+                              color: Colors.orange.withOpacity(0.7),
+                              borderRadius: BorderRadius.circular(20)),
+                          child: Center(
+                            child: Text(
+                              "Let\'s Go",
+                              style: GoogleFonts.montserrat(
+                                  fontSize: 19, color: Colors.white),
+                            ),
+                          ),
                         ),
                       ),
-                    ),
-                  )
-                ],
+                    )
+                  ],
+                ),
               ),
             )
           ],

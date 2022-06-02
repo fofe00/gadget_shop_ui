@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gadget_shop_ui/pages/dashboard;page.dart';
 import 'package:gadget_shop_ui/pages/home.page.dart';
 
 void main() {
@@ -12,8 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'ainix gadget ui',
-      home: const HomePage(),
+      //home: const HomePage(),
+      routes: {
+        '/': (context) => const HomePage(),
+        '/dash': (context) => Dashboard(),
+      },
     );
   }
 }
