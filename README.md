@@ -1,8 +1,11 @@
 # gadget_shop_ui
 
 A new Flutter gadget shop ui by  @insightlancer
+![alt text](https://github.com/fofe00/gadget_shop_ui/blob/master/sreens/photo_2022-06-02_18-46-24.jpg)
 
-## Getting Started
+![alt text](https://github.com/fofe00/gadget_shop_ui/blob/master/sreens/photo_2022-06-02_18-46-24.jpg)
+
+
 
 This project is a starting point for a Flutter application.
 
