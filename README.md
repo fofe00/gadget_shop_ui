@@ -1,7 +1,7 @@
 # gadget_shop_ui
 
 A new Flutter gadget shop ui by  @insightlancer
-![alt text](https://github.com/fofe00/gadget_shop_ui/blob/master/sreens/photo_2022-06-02_18-46-24.jpg)
+![alt text](https://github.com/fofe00/gadget_shop_ui/blob/master/sreens/photo_2022-06-03_21-45-03.jpg)
 
 ![alt text](https://github.com/fofe00/gadget_shop_ui/blob/master/sreens/photo_2022-06-02_18-46-24.jpg)
 
