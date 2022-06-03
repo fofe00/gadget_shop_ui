@@ -16,6 +16,7 @@ class _HomeState extends State<Home> {
       body: SafeArea(
         child: ListView(
           shrinkWrap: true,
+          physics: BouncingScrollPhysics(),
           children: [
             Container(
               margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
@@ -168,6 +169,7 @@ class _HomeState extends State<Home> {
                     height: 100,
                     child: ListView(
                       shrinkWrap: true,
+                      physics: BouncingScrollPhysics(),
                       scrollDirection: Axis.horizontal,
                       children: [
                         _brand("assets/be.svg", "Beats"),
@@ -227,7 +229,7 @@ class _HomeState extends State<Home> {
                     height:MediaQuery.of(context).size.height/2 ,
                     child: GridView.count(
                       shrinkWrap: true,
-                      physics: ScrollPhysics(),
+                      physics: NeverScrollableScrollPhysics(),
                       crossAxisCount: 2,
                       crossAxisSpacing: 8,
                       mainAxisSpacing: 8,
@@ -253,14 +255,14 @@ class _HomeState extends State<Home> {
       //height: MediaQuery.of(context).size.width-40/2,
       decoration: BoxDecoration(
           color: Colors.blue.withOpacity(0.1),
-          borderRadius: BorderRadius.circular(15)
+          borderRadius: BorderRadius.circular(15),
       ),
       child: Column(
         children: [
           Image.asset(
             itemImage,
-            height: 150,
-            width: 150,
+            height: 130,
+            width: 130,
             fit: BoxFit.cover,
           ),
           Flexible(
